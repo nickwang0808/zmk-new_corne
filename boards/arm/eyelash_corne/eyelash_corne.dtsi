@@ -20,10 +20,11 @@
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
+        zephyr,display = &nice_view;
         zmk,kscan = &kscan0;
         zmk,battery = &vbatt;
         zmk,underglow = &led_strip;
-       zmk,physical-layout = &default_layout;
+        zmk,physical-layout = &default_layout;
         zmk,backlight = &backlight;
     };
 
@@ -198,6 +199,14 @@ nice_view_spi: &spi0 {
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+
+    nice_view: ls0xx@0 {
+        compatible = "sharp,ls0xx";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+        width = <160>;
+        height = <68>;
+    };
 };
 
 &pwm0 {

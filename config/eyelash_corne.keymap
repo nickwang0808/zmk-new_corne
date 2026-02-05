@@ -108,35 +108,35 @@
             key-positions = <1 16 30>;
         };
 
-        // J+K = Enter
+        // J+K = Enter (positions 23+24)
         combo_jk_enter {
             timeout-ms = <50>;
-            key-positions = <21 22>;
+            key-positions = <23 24>;
             bindings = <&kp ENTER>;
         };
 
-        // D+F = Enter
+        // D+F = Enter (positions 16+17)
         combo_df_enter {
             timeout-ms = <50>;
-            key-positions = <17 18>;
+            key-positions = <16 17>;
             bindings = <&kp ENTER>;
         };
 
-        // Q+W = Escape
+        // Q+W = Escape (positions 1+2)
         combo_qw_esc {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
 
-        // S+D = MO(1)
+        // S+D = MO(1) (positions 15+16)
         combo_sd_layer1 {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <15 16>;
             bindings = <&mo 1>;
         };
 
-        // X+C = One-shot GUI
+        // X+C = One-shot GUI (positions 30+31) - this one works
         combo_xc_gui {
             timeout-ms = <50>;
             key-positions = <30 31>;
